@@ -11,7 +11,6 @@ export default function Header() {
   const lang = useAppSelector((state) => state.language.lang) as Lang;
   const theme = useAppSelector((state) => state.theme.mode);
   const isRTL = lang === "ar";
-
   return (
     <header
       className={`w-full ${
@@ -24,18 +23,19 @@ export default function Header() {
         className="px-4 lg:px-16 flex items-center justify-between py-4"
         dir={isRTL ? "rtl" : "ltr"}
       >
-        {/* App Name with Home link */}
+        {/* logo app name */}
         <Link
           to="/"
           className="font-bold text-xl bg-gradient-to-r from-[#50e5b0] to-[#0172a7] bg-clip-text text-transparent"
         >
           {translations[lang].appName ?? "News"}
         </Link>
-
         <div
-          className={`flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""}`}
+          className={`flex items-center gap-4 ${
+            isRTL ? "flex-row-reverse" : ""
+          }`}
         >
-          {/* Theme Toggle Light and Dark */}
+          {/* theme toggle dark and light */}
           <button
             onClick={() => dispatch(toggleTheme())}
             className={`w-10 h-5 flex items-center rounded-full p-1 transition-all duration-300 cursor-pointer ${
@@ -60,8 +60,7 @@ export default function Header() {
               )}
             </div>
           </button>
-
-          {/* Language Select Option */}
+          {/* language select option en and ar */}
           <select
             value={lang}
             onChange={(e) => dispatch(setLanguage(e.target.value as Lang))}

@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useAppDispatch } from "./app/hooks";
 import { setTheme } from "./features/theme/themeSlice";
 import Header from "./shared/layout/Header";
+import NewsList from "./pages/NewsPage";
 
 export default function App() {
   const dispatch = useAppDispatch();
-
+  
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme") as
       | "light"
@@ -18,6 +19,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Header />
+      <Routes>
+        <Route path="/" element={<NewsList />} />
+      </Routes>
     </BrowserRouter>
   );
 }
