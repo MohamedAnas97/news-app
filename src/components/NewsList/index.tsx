@@ -36,7 +36,12 @@ export default function NewsList() {
           {uniquePosts.map((post) => {
             const author = usersMap.get(post?.userId);
             return (
-              <NewsCard key={post?.id} post={post} author={author} lang={lang} />
+              <NewsCard
+                key={post?.id}
+                post={post}
+                author={author}
+                lang={lang}
+              />
             );
           })}
         </div>

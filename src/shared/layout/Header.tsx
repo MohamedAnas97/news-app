@@ -73,8 +73,12 @@ export default function Header() {
               }
             `}
           >
-            <option value="en" className="font-semibold text-xs">EN</option>
-            <option value="ar" className="font-semibold text-xs">AR</option>
+            <option value="en" className="font-semibold text-xs">
+              EN
+            </option>
+            <option value="ar" className="font-semibold text-xs">
+              AR
+            </option>
           </select>
         </div>
       </div>

@@ -3,7 +3,10 @@ export default function Skeleton1() {
     <div className="px-4 lg:px-16 py-10">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 6 }).map((_, idx) => (
-          <div key={idx} className="animate-pulse bg-gray-100 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+          <div
+            key={idx}
+            className="animate-pulse bg-gray-100 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden"
+          >
             {/* image skeleton  */}
             <div className="h-48 bg-gray-300 dark:bg-gray-600 w-full"></div>
             {/* text skeleton */}
@@ -22,5 +25,5 @@ export default function Skeleton1() {
         ))}
       </div>
     </div>
-  )
+  );
 }

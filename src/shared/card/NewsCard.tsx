@@ -6,13 +6,11 @@ import { translateToArabic } from "../../utils/translate";
 import type { Post, User } from "../../features/news/types";
 import type { Lang } from "../../language/translations";
 import { FaUser } from "react-icons/fa";
-
 interface NewsCardProps {
   post: Post;
   author?: User;
   lang: Lang;
 }
-
 export default function NewsCard({ post, author, lang }: NewsCardProps) {
   const theme = useAppSelector((state) => state.theme.mode);
   const [translated, setTranslated] = useState({

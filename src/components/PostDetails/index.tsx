@@ -17,11 +17,9 @@ import {
   FaHome,
 } from "react-icons/fa";
 import Skeleton from "../../shared/skeleton/Skeleton2";
-
 // capitalize each word
 const capitalizeEachWord = (text: string) =>
   text.replace(/\b\w/g, (char) => char.toUpperCase());
-
 export default function PostDetails() {
   const { id } = useParams<{ id: string }>();
   const lang = useAppSelector((state) => state.language.lang) as Lang;
@@ -37,7 +35,6 @@ export default function PostDetails() {
   const [body, setBody] = useState("");
 
   const usersMap = users ? new Map(users.map((u) => [u.id, u])) : new Map();
-
   // override post for unique author
   const uniquePost =
     post && users
@@ -45,7 +42,6 @@ export default function PostDetails() {
       : post;
 
   const author = uniquePost ? usersMap.get(uniquePost.userId) : undefined;
-
   const isPageLoading = postLoading || usersLoading;
 
   useEffect(() => {
@@ -74,7 +70,7 @@ export default function PostDetails() {
 
   if (isPageLoading) {
     return (
-      // Skeleton loader here
+      // skeleton loader here
       <div className="px-4 lg:px-16 py-8">
         <Skeleton />
       </div>
@@ -84,7 +80,6 @@ export default function PostDetails() {
   if (!post || !author) {
     return <p className="p-4">{translations[lang].loading}</p>;
   }
-
   return (
     <div className="px-4 lg:px-16 py-8 font-sans">
       <nav className="text-sm mb-4 flex items-center gap-2 text-gray-500 dark:text-gray-400">
