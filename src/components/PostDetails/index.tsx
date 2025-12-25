@@ -81,7 +81,7 @@ export default function PostDetails() {
     return <p className="p-4">{translations[lang].loading}</p>;
   }
   return (
-    <div className="px-4 lg:px-16 py-8 font-sans">
+    <div className="px-4 lg:px-16 py-8 font-sans bg-gray-50 dark:bg-gray-900">
       <nav className="text-sm mb-4 flex items-center gap-2 text-gray-500 dark:text-gray-400">
         <Link
           to="/"
@@ -90,7 +90,7 @@ export default function PostDetails() {
           <FaHome /> {translations[lang].home}
         </Link>
         <span> &gt; </span>
-        <span className="font-medium truncate">
+        <span className="font-semibold truncate text-[#006fac]">
           {capitalizeEachWord(title)}
         </span>
       </nav>

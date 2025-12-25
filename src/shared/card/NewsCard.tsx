@@ -65,7 +65,7 @@ export default function NewsCard({ post, author, lang }: NewsCardProps) {
         </h2>
         {/* news author name */}
         <p className="flex items-baseline text-sm font-medium gap-1">
-          <span className="font-bold">{translations[lang]?.author}:</span>
+          <span className="font-bold dark:text-slate-200">{translations[lang]?.author}:</span>
           <FaUser size={11} className="text-gray-500 dark:text-gray-400" />
           <span className="text-gray-800 dark:text-slate-200 font-medium">
             {author?.name ?? "—"}
