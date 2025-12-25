@@ -117,7 +117,7 @@ export default function PostDetails() {
         {body.charAt(0).toUpperCase() + body.slice(1)}
       </p>
       {/* author more information */}
-      <div className="bg-[#46ebae26] dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col lg:flex-row gap-6">
+      <div className="bg-[#46ebae26] dark:bg-gray-800 p-6 rounded-xl shadow-sm flex flex-col lg:flex-row gap-6">
         <div className="flex-1 flex flex-col gap-3">
           <p className="flex items-baseline gap-1 text-gray-700 dark:text-gray-300">
             <FaUser /> {translations[lang].author}:{" "}
