@@ -65,7 +65,7 @@ export default function Header() {
             value={lang}
             onChange={(e) => dispatch(setLanguage(e.target.value as Lang))}
             className={`
-              px-2 py-1 text-xs font-semibold rounded cursor-pointer transition-colors duration-300 appearance-none outline-none
+              px-2 py-1 text-sm font-semibold rounded cursor-pointer transition-colors duration-300 appearance-none outline-none
               ${
                 theme === "dark"
                   ? "bg-slate-800 text-white border-none"
@@ -73,8 +73,8 @@ export default function Header() {
               }
             `}
           >
-            <option value="en" className="font-semibold">EN</option>
-            <option value="ar" className="font-semibold">AR</option>
+            <option value="en" className="font-semibold text-xs">EN</option>
+            <option value="ar" className="font-semibold text-xs">AR</option>
           </select>
         </div>
       </div>

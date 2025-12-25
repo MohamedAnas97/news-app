@@ -5,7 +5,7 @@ import { setTheme } from "./features/theme/themeSlice";
 import Header from "./shared/layout/Header";
 import Footer from "./shared/layout/Footer";
 import NewsList from "./pages/NewsPage";
-
+import PostDetailsPage from "./pages/PostDetailsPage";
 export default function App() {
   const dispatch = useAppDispatch();
 
@@ -22,6 +22,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<NewsList />} />
+        <Route path="/post/:id" element={<PostDetailsPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
