@@ -1,4 +1,4 @@
-# News App (React + TypeScript + Vite)
+# News App (React + TypeScript)
 
 A small **News Simulation App** with **Dark/Light theme** and **English/Arabic (EN/AR) localization**, built as part of the test project.
 
@@ -16,7 +16,7 @@ A small **News Simulation App** with **Dark/Light theme** and **English/Arabic (
 ---
 
 ## Tech Stack
-React 18, TypeScript, Vite, Redux Toolkit (RTK), RTK Query, TailwindCSS, JSONPlaceholder API
+React 18, TypeScript, Redux Toolkit (RTK), RTK Query, TailwindCSS, JSONPlaceholder API
 
 ---
 
